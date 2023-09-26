@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var ctrlothers = require('../controllers/others');
-
+require('dotenv').config();
 router.get('/login',ctrlothers.login);
 router.get('/contact',ctrlothers.contact);
 router.get('/signup',ctrlothers.signup);
