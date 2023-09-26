@@ -1,5 +1,5 @@
 # Foodie chef!
-https://foodiechef7a46.cyclic.cloud
+https://7a46-foodiechef.cyclic.cloud
 
 Welcome to your food blog website repository! This repository contains the code and assets for your food blog website, where you can share delicious recipes and culinary experiences.
 
