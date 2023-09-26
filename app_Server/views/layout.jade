@@ -1,0 +1,174 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Foodie chef!
+    link(href="favicon-32x32.png" type="image/x-icon",rel="icon")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    link(href="https://cdn.jsdelivr.net/npm/simplebar@5.3.0/dist/simplebar.min.css", rel="stylesheet")
+    script(src="https://cdn.jsdelivr.net/npm/simplebar@5.3.0/dist/simplebar.min.js")
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    script.
+      const navLinks = document.querySelectorAll(".navbar-nav a.nav-link");
+      navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop,
+              behavior: "smooth"
+            });
+          }
+        });
+      })
+
+    style.
+      /* Custom styles */
+      body {
+        background-color: #333;
+      }
+      .simplebar-scrollbar::before {
+        background-color: #f06292;
+      }
+      .simplebar-track.simplebar-horizontal {
+        background-color: #f06292;
+      }
+      .simplebar-track.simplebar-vertical {
+        background-color: white;
+      }
+      .navbar-custom {
+        background-color: #333;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #f06292;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #f06292;
+      }
+      /* Set background color for index page */
+      .index-page {
+        background-color: #f06292;
+        color: #ffffff;
+        padding: 50px;
+      }
+      /* Food items section */
+      .food-items {
+        padding: 50px 0;
+      }
+      .food-card {
+        border: none;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+      .food-card:hover {
+        transform: scale(1.05);
+      }
+      .food-card img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+      }
+      .food-card:hover img {
+        transform: scale(1.1);
+      }
+      .food-card .btn-secondary:hover {
+        background-color: #f06292;
+        border-color: #f06292;
+      }
+      /* Status section */
+      .status {
+        padding: 10px 0;
+        background-color: #f06292;
+        
+      }
+      .dish-status {
+        margin-bottom: 10px;
+        color: #333333;
+      }
+      .dish-name {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333333;
+      }
+      /* Pink background class */
+      .bg-pink {
+        background-color: #f06292;
+      }
+    
+  body
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href="/") Foodie chef
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/login") Login
+            li.nav-item
+              a.nav-link(href="/login") Recipes
+            li.nav-item
+              a.nav-link(href="/about") About Us
+            li.nav-item
+              a.nav-link(href="/contact") Contact Us
+
+    .index-page
+      h1 Welcome to Foodie chef!
+      p Explore delicious recipes and more.
+      a.btn.btn-primary(href="/login") Get Started
+    .food-items.container
+      .row
+        .col-lg-4.col-md-6.mb-4
+          .card.food-card
+            img.card-img-top(src="https://media.istockphoto.com/id/1146291429/photo/palak-paneer-or-spinach-and-cottage-cheese-curry-on-a-dark-background-traditional-indian-food.jpg?s=612x612&w=0&k=20&c=LuY5cNs9p9EonSEqRE8t7xgvCPjLfT2iPYhsg5ZRNkw=", alt="Food Item")
+            .card-body
+              h5.card-title Palak paneer
+              p.card-text Description of the food item.
+              a.btn.btn-secondary(href="/palakpaneer") Learn More
+        .col-lg-4.col-md-6.mb-4
+          .card.food-card
+            img.card-img-top(src="https://media.istockphoto.com/id/1333127675/photo/chicken-biryani-spicy-indian-malabar-biryani-hyderabadi-biryani-dum-biriyani-pulao-golden.jpg?s=612x612&w=0&k=20&c=cuof8o-8VkdKw2EuDV6XTOFjqQBobiff5ugsBwD4Erg=", alt="Food Item")
+            .card-body
+              h5.card-title Chicken Biryani
+              p.card-text Description of the food item.
+              a.btn.btn-secondary(href="/chickenbiryani") Learn More
+        .col-lg-4.col-md-6.mb-4
+          .card.food-card
+            img.card-img-top(src="https://media.istockphoto.com/id/1286704566/photo/image-of-turquoise-blue-cooking-pan-filled-with-butter-chicken-tikka-curry-large-chunks-of.jpg?s=612x612&w=0&k=20&c=OLP7dEK6tyVtaUZAGC9SYftn9JOanU7IibSRs_F37DA=", alt="Food Item")
+            .card-body
+              h5.card-title Chicken Tikka Masala
+              p.card-text Description of the food item.
+              a.btn.btn-secondary(href="/chickentikkamasala") Learn More
+      .status.container
+        h2 Dishes Status
+        .row
+          .col-md-4
+            .dish-status
+              h4.dish-name Dish 1
+              .progress
+                .progress-bar.progress-bar-striped.progress-bar-animated(style="width: 80%") 80%
+          .col-md-4
+            .dish-status
+              h4.dish-name Dish 2
+              .progress
+                .progress-bar.progress-bar-striped.progress-bar-animated(style="width: 45%") 45%
+          .col-md-4
+            .dish-status
+              h4.dish-name Dish 3
+              .progress
+                .progress-bar.progress-bar-striped.progress-bar-animated(style="width: 60%") 60%

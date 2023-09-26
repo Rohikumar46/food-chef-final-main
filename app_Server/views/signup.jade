@@ -1,0 +1,152 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Signup - Your Food chef!
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    style.
+      /* Custom styles */
+      body {
+        background-color: #292b2c; /* Dark gray background */
+        font-family: 'Raleway', sans-serif;
+        color: #f2f2f2; /* Light text color */
+      }
+      .navbar-custom {
+        background-color: #f06292; /* Pinkish color */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #f8bbd0; /* Lighter pink on hover */
+      }
+      /* Login and Signup page specific styles */
+      .login-container, .signup-container {
+        background-color: #1d1f20; /* Darker gray background */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 50px auto;
+        max-width: 400px;
+      }
+      .login-title, .signup-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #f06292; /* Pinkish color */
+      }
+      .login-form, .signup-form {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        color: #f2f2f2; /* Light text color */
+        font-size: 16px;
+      }
+      .form-control {
+        background-color: #363839; /* Darker gray input background */
+        border: none;
+        border-radius: 5px;
+        color: #f2f2f2; /* Light text color */
+        padding: 10px;
+        width: 100%;
+      }
+      .login-button, .signup-button {
+        background-color: #f06292; /* Pinkish button background */
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+      .login-button:hover, .signup-button:hover {
+        background-color: #e75482; /* Lighter pink on hover */
+      }
+      .login-message, .signup-message {
+        color: #888; /* Light gray text color */
+        font-size: 14px;
+        text-align: center;
+      }
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href="/") Foodie chef!
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/login") Login
+            li.nav-item
+              a.nav-link(href="/recipes") Recipes
+            li.nav-item
+              a.nav-link(href="/about") About Us
+            li.nav-item
+              a.nav-link(href="/contact") Contact Us
+
+    .signup-container
+      h1.signup-title Sign Up
+      form.signup-form(action="#", method="POST")
+        div.form-group
+          label(for="username") Username
+          input.form-control(type="text", id="username", name="username", required)
+        div.form-group
+          label(for="password") Password
+          input.form-control(type="password", id="password", name="password", required)
+        div.form-group
+          label(for="confirm-password") Confirm Password
+          input.form-control(type="password", id="confirm-password", name="confirm-password", required)
+        button.signup-button(type="submit") Sign Up
+      p.signup-message Already have an account? 
+        a(href="/login") Log In
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    script.
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get references to form elements
+        const signupForm = document.querySelector(".signup-form");
+        const usernameInput = document.querySelector("#username");
+        const passwordInput = document.querySelector("#password");
+        const confirmPasswordInput = document.querySelector("#confirm-password");
+        const signupMessage = document.querySelector(".signup-message");
+
+        // Event listener for signup form submission
+        signupForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get input values
+          const username = usernameInput.value;
+          const password = passwordInput.value;
+          const confirmPassword = confirmPasswordInput.value;
+
+          // Check if passwords match
+          if (password !== confirmPassword) {
+            signupMessage.textContent = "Passwords do not match.";
+          } else {
+            // Simulate a successful signup for this example
+            // In a real application, you'd make an AJAX request to a server
+            // and handle the signup process there.
+            signupMessage.textContent = "Signup successful!";
+            // Redirect to the user's dashboard or another page
+            setTimeout(function () {
+              window.location.href = "/login"; // Replace with the actual URL
+            }, 1000);
+          }
+        });
+      });

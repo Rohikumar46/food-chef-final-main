@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title About Us - My Foodie chef!
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    style.
+      /* Custom styles */
+      body {
+        background-color: #333; /* Dark gray background */
+        font-family: 'Raleway', sans-serif;
+        color: #f2f2f2; /* Light text color */
+      }
+      .navbar-custom {
+        background-color: #f06292; /* Pinkish color */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #f8bbd0; /* Lighter pink on hover */
+      }
+      /* About page specific styles */
+      .about-container {
+        background-color: #222; /* Darker gray background */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 50px auto;
+        max-width: 800px;
+      }
+      .about-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #f06292; /* Pinkish color */
+      }
+      .about-text {
+        font-size: 18px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #f2f2f2; /* Light text color */
+      }
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href="/") Foodie chef!
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/login") Login
+            li.nav-item
+              a.nav-link(href="/recipes") Recipes
+            li.nav-item
+              a.nav-link(href="/about") About Us
+            li.nav-item
+              a.nav-link(href="/contact") Contact Us
+
+    .about-container
+      h1.about-title About Us
+      p.about-text Welcome to Foodie chef! We are a passionate team of food enthusiasts dedicated to share delicious recipes, cooking tips, and culinary experiences. Join us on a flavorful journey and explore the world of delectable cuisines and mouthwatering dishes.!!!
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")

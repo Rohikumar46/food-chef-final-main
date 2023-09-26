@@ -1,0 +1,128 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Contact Us - Foodie Chef!
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    script(src="https://cdn.jsdelivr.net/npm/simplebar@5.3.0/dist/simplebar.min.js")
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    script.
+      const navLinks = document.querySelectorAll(".navbar-nav a.nav-link");
+      navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop,
+              behavior: "smooth"
+            });
+          }
+        });
+      })
+
+    style.
+      /* Custom styles */
+      body {
+        background-color: #333;
+        font-family: 'Arial', sans-serif;
+      }
+      .navbar-custom {
+        background-color: #f06292;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: white;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #f06292;
+      }
+      /* Status section */
+      .status {
+        padding: 20px;
+        background-color: #222;
+        color: #fff;
+        margin: 50px auto;
+      }
+      .status p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .status h2 {
+        font-family: 'Pacifico', cursive;
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      /* Form */
+      form {
+        margin-top: 20px;
+      }
+      form .form-group {
+        margin-bottom: 20px;
+      }
+      form input[type="text"],
+      form input[type="email"],
+      form textarea {
+        font-size: 18px;
+        padding: 10px;
+        border-color: #f06292;
+        width: 100%;
+      }
+      form textarea {
+        resize: vertical;
+      }
+      form button[type="submit"] {
+        background-color: #333;
+        border-color: #f06292;
+        color: #f06292;
+        font-size: 18px;
+        padding: 10px 40px;
+        cursor: pointer;
+      }
+      form button[type="submit"]:hover {
+        background-color: #f06292;
+        color: #fff;
+      }
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href="/") Foodie chef!
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/recipes") Recipes
+            li.nav-item
+              a.nav-link(href="/about") About Us
+            li.nav-item
+              a.nav-link(href="/contact") Contact Us
+
+    .container
+      .row
+        .col-md-6.offset-md-3
+          .status.container.bg-pink
+            p Feel Free to reach us!
+            h2 Contact Us
+            p Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get in touch with you.
+            form
+              .form-group
+                input#name.form-control(type="text", name="name", placeholder="Your Name", required)
+              .form-group
+                input#email.form-control(type="email", name="email", placeholder="Your Email", required)
+              .form-group
+                textarea#message.form-control(rows="5", name="message", placeholder="Your Message", required)
+              button.btn.btn-primary(type="submit") Send Message

@@ -1,0 +1,126 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Chicken Biryani Recipe - Your Food Blog
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    style.
+      /* Custom styles */
+      body {
+        background-color: #333; /* Dark gray background */
+        font-family: 'Raleway', sans-serif;
+        color: #f2f2f2; /* Light text color */
+      }
+      .navbar-custom {
+        background-color: #f06292; /* Pinkish color */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #f8bbd0; /* Lighter pink on hover */
+      }
+      /* Recipe page specific styles */
+      .recipe-container {
+        background-color: #222; /* Darker gray background */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 50px auto;
+        max-width: 800px;
+      }
+      .recipe-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #f06292; /* Pinkish color */
+      }
+      .recipe-text {
+        font-size: 18px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #f2f2f2; /* Light text color */
+      }
+      .ingredient-list {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #f2f2f2; /* Light text color */
+      }
+      .procedure-step {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #f2f2f2; /* Light text color */
+      }
+      /* Image card */
+      .image-card {
+        align-self: flex-end;
+        width: 300px;
+        margin-top: 30px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href="/") Foodie chef!
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/login") Login
+            li.nav-item
+              a.nav-link(href="/recipes") Recipes
+            li.nav-item
+              a.nav-link(href="about") About Us
+            li.nav-item
+              a.nav-link(href="/contact") Contact Us
+
+    .recipe-container
+      h1.recipe-title Chicken Biryani Recipe
+      p.recipe-text A flavorful Indian dish made with marinated chicken and fragrant spices.
+
+      h2.ingredients-title Ingredients
+      ul.ingredient-list
+        li 2 cups basmati rice, soaked
+        li 500g chicken, cut into pieces
+        li 2 onions, thinly sliced
+        li 2 tomatoes, chopped
+        li 1/2 cup yogurt
+        li 2 tbsp ginger-garlic paste
+        li 1/4 cup mint leaves, chopped
+        li 1/4 cup cilantro leaves, chopped
+        li 1/2 tsp turmeric powder
+        li 1 tsp red chili powder
+        li 1 tsp garam masala
+        li Whole spices (cinnamon, cardamom, cloves)
+        li Ghee and oil
+        li Salt to taste
+
+      h2.procedure-title Procedure
+      p.procedure-step Marinate the chicken with yogurt, ginger-garlic paste, red chili powder, turmeric powder, and salt. Let it sit for at least 1 hour.
+      p.procedure-step In a large pot, heat ghee and oil. Add the whole spices and sauté until fragrant.
+      p.procedure-step Add sliced onions and sauté until golden brown.
+      p.procedure-step Add tomatoes and cook until they turn soft.
+      p.procedure-step Add marinated chicken and cook until it's no longer pink.
+      p.procedure-step In a separate pot, parboil the soaked rice until 70% cooked. Drain.
+      p.procedure-step Layer the chicken and rice in the pot. Sprinkle garam masala, mint, and cilantro leaves.
+      p.procedure-step Cover the pot tightly and cook on low heat until the rice is fully cooked and aromatic.
+      p.procedure-step Serve the delicious Chicken Biryani with raita and enjoy!
+
+    
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")

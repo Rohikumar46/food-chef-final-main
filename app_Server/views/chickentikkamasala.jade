@@ -1,0 +1,125 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Chicken Tikka Masala Recipe - Your Food Blog
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    style.
+      /* Custom styles */
+      body {
+        background-color: #333; /* Dark gray background */
+        font-family: 'Raleway', sans-serif;
+        color: #f2f2f2; /* Light text color */
+      }
+      .navbar-custom {
+        background-color: #f06292; /* Pinkish color */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #f8bbd0; /* Lighter pink on hover */
+      }
+      /* Recipe page specific styles */
+      .recipe-container {
+        background-color: #222; /* Darker gray background */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 50px auto;
+        max-width: 800px;
+      }
+      .recipe-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #f06292; /* Pinkish color */
+      }
+      .recipe-text {
+        font-size: 18px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #f2f2f2; /* Light text color */
+      }
+      .ingredient-list {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #f2f2f2; /* Light text color */
+      }
+      .procedure-step {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #f2f2f2; /* Light text color */
+      }
+      /* Image card */
+      .image-card {
+        align-self: flex-end;
+        width: 300px;
+        margin-top: 30px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href="/") Foodie chef!
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/login") Login
+            li.nav-item
+              a.nav-link(href="/recipes") Recipes
+            li.nav-item
+              a.nav-link(href="/about") About Us
+            li.nav-item
+              a.nav-link(href="/contact") Contact Us
+
+    .recipe-container
+      h1.recipe-title Chicken Tikka Masala Recipe
+      p.recipe-text A classic Indian dish with marinated chicken cooked in a creamy tomato-based sauce.
+
+      h2.ingredients-title Ingredients
+      ul.ingredient-list
+        li 500g boneless chicken, cut into pieces
+        li 1 cup plain yogurt
+        li 2 onions, finely chopped
+        li 2 tomatoes, pureed
+        li 1/4 cup heavy cream
+        li 1/4 cup butter
+        li 1 tbsp ginger-garlic paste
+        li 1 tsp cumin powder
+        li 1 tsp coriander powder
+        li 1/2 tsp turmeric powder
+        li 1/2 tsp red chili powder
+        li 1/2 tsp garam masala
+        li 1/4 tsp cinnamon powder
+        li Salt to taste
+
+      h2.procedure-title Procedure
+      p.procedure-step Marinate the chicken with yogurt, ginger-garlic paste, cumin powder, coriander powder, turmeric powder, red chili powder, and salt. Refrigerate for at least 1 hour.
+      p.procedure-step Grill or cook the marinated chicken until fully cooked and slightly charred.
+      p.procedure-step In a pan, melt butter and sauté chopped onions until golden brown.
+      p.procedure-step Add tomato puree and cook until the oil separates.
+      p.procedure-step Add cumin powder, coriander powder, cinnamon powder, and garam masala. Cook for a couple of minutes.
+      p.procedure-step Reduce the heat and stir in the cream.
+      p.procedure-step Add the grilled chicken pieces and simmer for a few minutes.
+      p.procedure-step Garnish with cilantro and serve the delicious Chicken Tikka Masala with naan or rice.
+
+    
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")

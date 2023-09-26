@@ -1,0 +1,117 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title New Recipes - My foodie chef!
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    style.
+      /* Custom styles */
+      body {
+        background-color: #333; /* Dark gray background */
+        font-family: 'Raleway', sans-serif;
+        color: #f2f2f2; /* Light text color */
+      }
+      .navbar-custom {
+        background-color: #f06292; /* Pinkish color */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #f8bbd0; /* Lighter pink on hover */
+      }
+      /* Recipes page specific styles */
+      .recipes-container {
+        padding: 50px 0;
+      }
+      .section-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #f2f2f2; /* Light text color */
+        text-align: center;
+      }
+      .recipe-card {
+        background-color: #333; /* Dark gray card background */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .recipe-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      .recipe-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #f06292; /* Pinkish color */
+      }
+      .recipe-text {
+        font-size: 16px;
+        color: #f2f2f2; /* Light text color */
+        line-height: 1.6;
+      }
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href="/") Foodie chef!
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/login") Login
+            li.nav-item
+              a.nav-link(href="/recipes") Recipes
+            li.nav-item
+              a.nav-link(href="/about") About Us
+            li.nav-item
+              a.nav-link(href="/contact") Contact Us
+
+    .recipes-container
+      h2.section-title Vegetarian Dishes
+      .row
+        // Vegetarian Dishes
+        .col-md-6
+          .recipe-card
+            img.recipe-image(src="https://media.istockphoto.com/id/1305516750/photo/shahi-paneer-or-paneer-kadai.jpg?s=612x612&w=0&k=20&c=NuKbuk0CiczK1Nx3U2qHek4l99OC3YoJ92wlaQAL0ls=", alt="Recipe Image")
+            h3.recipe-title Paneer Kadai
+            p.recipe-text A flavorful and delicious vegetarian recipe that will delight your taste buds. Try it out today!
+        .col-md-6
+          .recipe-card
+            img.recipe-image(src="https://media.istockphoto.com/id/1157260411/photo/mix-vegetable-curry-indian-main-course-recipe-contains-carrots-cauliflower-green-peas-and.jpg?s=612x612&w=0&k=20&c=d1sgTnsz5GqZRUOy9LFQPI3HWTaIF0GKzoKfsFOPy9I=", alt="Recipe Image")
+            h3.recipe-title Mix Vegetable Curry
+            p.recipe-text An exquisite vegetarian dish that combines flavors in a delightful way. Perfect for special occasions.
+
+      h2.section-title Non-Vegetarian Dishes
+      .row
+        // Non-Vegetarian Dishes
+        .col-md-6
+          .recipe-card
+            img.recipe-image(src="https://media.istockphoto.com/id/1212583009/photo/peri-peri-chicken-livers.jpg?s=612x612&w=0&k=20&c=i5JQmzid5s6P8bAgdVk-5qWnS2QA4ydsihXNhIWQQ4I=", alt="Recipe Image")
+            h3.recipe-title  Mutton curry
+            p.recipe-text A culinary masterpiece that's easy to make yet incredibly satisfying. A must-try!
+        .col-md-6
+          .recipe-card
+            img.recipe-image(src="https://media.istockphoto.com/id/1302827894/photo/chicken-curry.jpg?s=612x612&w=0&k=20&c=7NyUSN2mWij80XsLE7TGIo3GVMMZ8VD0mcWf6J4gb1Q=", alt="Recipe Image")
+            h3.recipe-title Chicken Curry
+            p.recipe-text A fusion of flavors that will take your taste buds on a journey. Prepare to be amazed!
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
