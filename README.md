@@ -11,10 +11,14 @@ Welcome to your food blog website repository! This repository contains the code 
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Sreenshots](#Screenshots)
 
 ## About
 
 Your Food Blog Website is a platform to showcase and share your favorite recipes, culinary adventures, and tips with food enthusiasts around the world. The website features a user-friendly interface, elegant design, and a variety of mouthwatering recipes.
+
+## Screenshots
+Check out the website Preview in Screenshots.md
 
 ## Features
 
