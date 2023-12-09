@@ -11,7 +11,7 @@ Welcome to your food blog website repository! This repository contains the code 
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Sreenshots](#Screenshots)
+- [Screenshots](#Screenshots)
 
 ## About
 
